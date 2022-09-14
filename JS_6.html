@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //         Практика JS 6.
+        // Даний масив числами, наприклад: [10, 20, 30, 50, 235, 3000]. Виведіть на екран лише ті числа з масиву, які починаються на цифру 1, 2 чи 5.
+
+        const numbers = [10, 20, 30, 50, 235, 3000];
+        const required = [1,2,5];
+        const result = numbers.filter(elem => {
+            let str = String(elem);
+            let firstNum = Number(str[0]);
+            return required.includes(firstNum);
+        });
+        
+        console.log(result);
+
+    </script>
+</body>
+</html>

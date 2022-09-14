@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //         Практика JS 10.
+        // Напишіть функцію, яка прийматиме масив з іменами, і повертатиме масив, але вже з віддаленими небажаними іменами. Масив із небажаними іменами має бути всередині вашої функції: const unwantedNames = [“Дима”, “Саша”, ”Ольга”, ”Микита”].
+
+        //  Приклад коду:
+        //    example(['Микита', 'Саша', 'Анастасія', 'Дима', 'Санич', 'Ольга', ]) => [Анастасія','Санич']
+        //    example(['Олексій', 'Семен', 'Василиса', 'Діма', 'Максим', 'Ольга', ]) => ['Олексій','Семен','Василиса','Максим']  
+        //    example(['Алішер', 'Ольга', ]) => ['Алішер']
+
+        function delUnwantedNames(arr){
+            const unwantedNames = ['Дима', 'Саша', 'Ольга', 'Микита'];
+            return arr.filter(elem => !unwantedNames.includes(elem));
+        };
+
+        console.log(delUnwantedNames(['Алішер', 'Ольга', ]));
+    </script>
+</body>
+</html>
