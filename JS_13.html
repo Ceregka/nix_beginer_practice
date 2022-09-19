@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //         Практика JS 13.
+        // Напишіть функцію, яка перетворює шістнадцяткове число (задане у вигляді рядка) на десяткове число.
+
+        //   Приклад коду:
+        //    hexToDec('1') => 1
+        //    hexToDec('a') => 10
+        //    hexToDec('10') => 16
+        //    hexToDec('FF') => 255
+        //    hexToDec('-C') => 12
+
+        function hexToDec(x){
+            if (x[0] == '-') x = x.slice(1);
+            return parseInt('0x'+x, 16);
+        }
+
+        console.log(hexToDec('-C'));
+    </script>
+</body>
+</html>

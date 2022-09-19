@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //       Необхідно реалізувати функцію, яка на вході приймає масив з різними типами даних = = gt; ['a', 1, 2, false, 'b'], а повертає об'єкт, у якому ці типи даних розсортовані за ключами.
+
+        // Приклад коду:
+        // {
+        //    number: [1, 2],
+        //    string: ['a', 'b'],
+        //    boolean: [false]
+        // }  
+
+        function sortElements (arr) {
+            const res = {};
+
+            for (el of arr) {
+                let key = typeof(el);
+                
+                if(!Object.keys(res).includes(key)) 
+                    res[key]=[];
+                                    
+                res[key].push(el);
+                                
+            }
+            return res;
+        }
+
+        console.log(sortElements(['a', 1, 2, [1,2], false, 'b']));
+    </script>
+</body>
+</html>

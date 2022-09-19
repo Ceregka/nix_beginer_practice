@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //         Практика JS 14.
+        // Видаліть n знаків оклику в пропозиції зліва направо. n – позитивне ціле число.
+
+        //   Приклад коду:
+        //    remove("Hi!",1) => "Hi"
+        //    remove("Hi!",100) => "Hi"
+        //    remove("Hi!!!",1) => "Hi!!"
+        //    remove("Hi!!!",100) => "Hi"
+        //    remove("!Hi",1) => "Hi"
+        //    remove("!Hi!",1) => "Hi!"
+        //    remove("!Hi!",100) => "Hi"
+        //    remove("!!!Hi !!hi!!! !hi",1) => "!!Hi !!hi!!! !hi"
+        //    remove("!!!Hi !!hi!!! !hi",3) => "Hi !!hi!!! !hi"
+        //    remove("!!!Hi !!hi!!! !hi",5) => "Hi hi!!! !hi"
+        //    remove("!!!Hi !!hi!!! !hi",100) => "Hi hi hi"
+
+        function remove(str, quantity){
+            const arr = str.split('');
+            for (let i = 0; i < quantity; i++){
+                for(let j = 0; j < str.length; j++){
+                    if (arr[j] == '!') {
+                        arr.splice(j,1);
+                        break;
+                    }
+                          
+                }
+            }
+            return arr.join('');
+        }
+
+        console.log(remove("!!!Hi !!hi!!! !hi",100));
+    </script>
+</body>
+</html>
